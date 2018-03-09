@@ -1,0 +1,1429 @@
+11:00:40[DEBUG  ]Thread_Socket_CBgame1
+11:00:40[INFO   ]Thread_Socket_CB connect_ip_port: 127.0.0.1,7000
+11:00:40[DEBUG  ]EpollServer::ConnectFd 7000
+
+11:00:40[INFO   ]EpollServer::StartServer:listen fd:5
+
+11:00:41[INFO   ]Py Init
+11:00:41[DEBUG  ]GameServer init
+11:00:42[DEBUG  ]connect success:127.0.0.1,7000
+
+11:05:06[DEBUG  ]EpollServer::OnAccept 5
+
+11:05:06[DEBUG  ]r_w_cb 9,1
+
+11:05:06[DEBUG  ]EpollServer::OnRead:9
+
+11:05:06[DEBUG  ]Buffer::Extend second:1024,0,1024
+
+11:05:06[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:05:06[DEBUG  ]OnServer:9,1,12,{"id": 1, "uid": "abcdefg"}
+11:05:06[DEBUG  ]login_player
+11:05:06[DEBUG  ]player init
+11:05:06[DEBUG  ]saveobj.querydb:SELECT lv,data,name,sex FROM player WHERE id=1
+11:05:06[DEBUG  ]MessageQueue::MQ2C_Push_Connector:1,2,{"sql": "SELECT lv,data,name,sex FROM player WHERE id=1"}
+
+11:05:06[DEBUG  ]OnExec:2
+11:05:06[DEBUG  ]Dispatch_Protocol finish
+11:05:06[DEBUG  ]eventfd_cb 8,1
+
+11:05:06[DEBUG  ]EpollServer::OnEventfd 8
+
+11:05:06[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:05:06[DEBUG  ]Buffer::Extend second:128,0,65
+
+11:05:06[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:05:06[DEBUG  ]connector_cb 4,2
+
+11:05:06[DEBUG  ]EpollServer::OnWrite:4
+
+11:05:06[DEBUG  ]EpollServer::OnWrite send_len 65
+
+11:05:06[DEBUG  ]netlib_send 65
+
+11:05:06[DEBUG  ]connector_cb 4,1
+
+11:05:06[DEBUG  ]EpollServer::OnRead:4
+
+11:05:06[DEBUG  ]Buffer::Extend second:1024,0,1024
+
+11:05:06[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:05:06[DEBUG  ]Game_Cpp2Py::OnConnector
+
+11:05:06[DEBUG  ]OnConnector: 1,2,{"data":"{\"pos\": 0, \"channel\": 7}","lv":"1","name":"default","sex":"1"}
+11:05:06[DEBUG  ]OnCallback:2
+11:05:06[DEBUG  ]sql_callback
+11:05:06[DEBUG  ]saveobj.loadFromDb:{u'lv': u'1', u'data': u'{"pos": 0, "channel": 7}', u'name': u'default', u'sex': u'1'}
+11:05:06[DEBUG  ]login_callback
+11:05:06[DEBUG  ]MessageQueue::mq2c_Push:9,1,12,{"sex": 1, "result": 1, "name": "default"}
+
+11:05:06[DEBUG  ]after_load,1,default,None
+11:05:06[DEBUG  ]eventfd_cb 8,1
+
+11:05:06[DEBUG  ]EpollServer::OnEventfd 8
+
+11:05:06[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:05:06[DEBUG  ]Buffer::Extend second:64,0,50
+
+11:05:06[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:05:06[DEBUG  ]r_w_cb 9,2
+
+11:05:06[DEBUG  ]EpollServer::OnWrite:9
+
+11:05:06[DEBUG  ]EpollServer::OnWrite send_len 50
+
+11:05:06[DEBUG  ]netlib_send 50
+
+11:05:11[DEBUG  ]saveobj.saveToDb:UPDATE player SET lv=1,data='{"pos": 0, "channel": 1}',name='default',sex=1 WHERE id=1
+11:05:11[DEBUG  ]MessageQueue::MQ2C_Push_Connector:2,0,{"sql": "UPDATE player SET lv=1,data='{\"pos\": 0, \"channel\": 1}',name='default',sex=1 WHERE id=1"}
+
+11:05:11[DEBUG  ]eventfd_cb 8,1
+
+11:05:11[DEBUG  ]EpollServer::OnEventfd 8
+
+11:05:11[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:05:11[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:05:11[DEBUG  ]connector_cb 4,2
+
+11:05:11[DEBUG  ]EpollServer::OnWrite:4
+
+11:05:11[DEBUG  ]EpollServer::OnWrite send_len 109
+
+11:05:11[DEBUG  ]netlib_send 109
+
+11:06:02[DEBUG  ]EpollServer::OnAccept 5
+
+11:06:02[DEBUG  ]r_w_cb 10,1
+
+11:06:02[DEBUG  ]EpollServer::OnRead:10
+
+11:06:02[DEBUG  ]Buffer::Extend second:1024,0,1024
+
+11:06:02[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:06:02[DEBUG  ]OnServer:10,1,12,{"id": 1, "uid": "abcdefg"}
+11:06:02[DEBUG  ]login_player
+11:06:02[DEBUG  ]relogin error: uniqid,1
+11:06:02[DEBUG  ]player init
+11:06:02[DEBUG  ]saveobj.querydb:SELECT lv,data,name,sex FROM player WHERE id=1
+11:06:02[DEBUG  ]MessageQueue::MQ2C_Push_Connector:1,3,{"sql": "SELECT lv,data,name,sex FROM player WHERE id=1"}
+
+11:06:02[DEBUG  ]OnExec:3
+11:06:02[DEBUG  ]Dispatch_Protocol finish
+11:06:02[DEBUG  ]eventfd_cb 8,1
+
+11:06:02[DEBUG  ]EpollServer::OnEventfd 8
+
+11:06:02[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:06:02[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:06:02[DEBUG  ]connector_cb 4,2
+
+11:06:02[DEBUG  ]EpollServer::OnWrite:4
+
+11:06:02[DEBUG  ]EpollServer::OnWrite send_len 65
+
+11:06:02[DEBUG  ]netlib_send 65
+
+11:06:02[DEBUG  ]connector_cb 4,1
+
+11:06:02[DEBUG  ]EpollServer::OnRead:4
+
+11:06:02[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:06:02[DEBUG  ]Game_Cpp2Py::OnConnector
+
+11:06:02[DEBUG  ]OnConnector: 1,3,{"data":"{\"pos\": 0, \"channel\": 1}","lv":"1","name":"default","sex":"1"}
+11:06:02[DEBUG  ]OnCallback:3
+11:06:02[DEBUG  ]sql_callback
+11:06:02[DEBUG  ]saveobj.loadFromDb:{u'lv': u'1', u'data': u'{"pos": 0, "channel": 1}', u'name': u'default', u'sex': u'1'}
+11:06:02[DEBUG  ]login_callback
+11:06:02[DEBUG  ]MessageQueue::mq2c_Push:10,1,12,{"sex": 1, "result": 1, "name": "default"}
+
+11:06:02[DEBUG  ]after_load,1,default,None
+11:06:02[DEBUG  ]eventfd_cb 8,1
+
+11:06:02[DEBUG  ]EpollServer::OnEventfd 8
+
+11:06:02[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:06:02[DEBUG  ]Buffer::Extend second:64,0,50
+
+11:06:02[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:06:02[DEBUG  ]r_w_cb 10,2
+
+11:06:02[DEBUG  ]EpollServer::OnWrite:10
+
+11:06:02[DEBUG  ]EpollServer::OnWrite send_len 50
+
+11:06:02[DEBUG  ]netlib_send 50
+
+11:06:06[DEBUG  ]saveobj.saveToDb:UPDATE player SET lv=1,data='{"pos": 0, "channel": 4}',name='default',sex=1 WHERE id=1
+11:06:06[DEBUG  ]MessageQueue::MQ2C_Push_Connector:2,0,{"sql": "UPDATE player SET lv=1,data='{\"pos\": 0, \"channel\": 4}',name='default',sex=1 WHERE id=1"}
+
+11:06:06[DEBUG  ]eventfd_cb 8,1
+
+11:06:06[DEBUG  ]EpollServer::OnEventfd 8
+
+11:06:06[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:06:06[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:06:06[DEBUG  ]connector_cb 4,2
+
+11:06:06[DEBUG  ]EpollServer::OnWrite:4
+
+11:06:06[DEBUG  ]EpollServer::OnWrite send_len 109
+
+11:06:06[DEBUG  ]netlib_send 109
+
+11:06:43[DEBUG  ]r_w_cb 9,1
+
+11:06:43[DEBUG  ]EpollServer::OnRead:9
+
+11:06:43[DEBUG  ]RemoveEvent: 9
+
+11:06:43[DEBUG  ]OnFdClosed 9
+
+11:06:43[DEBUG  ]MessageQueue::MQ2S_Push_Close
+
+11:06:43[INFO   ]remote close fd actively: 9
+
+11:06:43[DEBUG  ]r_w_cb 10,1
+
+11:06:43[DEBUG  ]EpollServer::OnRead:10
+
+11:06:43[DEBUG  ]RemoveEvent: 10
+
+11:06:43[DEBUG  ]OnFdClosed 10
+
+11:06:43[DEBUG  ]MessageQueue::MQ2S_Push_Close
+
+11:06:43[INFO   ]remote close fd actively: 10
+
+11:06:43[DEBUG  ]Py OnFdClosed:9
+11:06:43[DEBUG  ]Py OnFdClosed:10
+11:06:46[DEBUG  ]EpollServer::OnAccept 5
+
+11:06:46[DEBUG  ]r_w_cb 9,1
+
+11:06:46[DEBUG  ]EpollServer::OnRead:9
+
+11:06:46[DEBUG  ]Buffer::Extend second:1024,0,1024
+
+11:06:46[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:06:46[DEBUG  ]OnServer:9,1,12,{"id": 1, "uid": "abcdefg"}
+11:06:46[DEBUG  ]login_player
+11:06:46[DEBUG  ]player init
+11:06:46[DEBUG  ]saveobj.querydb:SELECT lv,data,name,sex FROM player WHERE id=1
+11:06:46[DEBUG  ]MessageQueue::MQ2C_Push_Connector:1,4,{"sql": "SELECT lv,data,name,sex FROM player WHERE id=1"}
+
+11:06:46[DEBUG  ]OnExec:4
+11:06:46[DEBUG  ]Dispatch_Protocol finish
+11:06:46[DEBUG  ]eventfd_cb 8,1
+
+11:06:46[DEBUG  ]EpollServer::OnEventfd 8
+
+11:06:46[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:06:46[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:06:46[DEBUG  ]connector_cb 4,2
+
+11:06:46[DEBUG  ]EpollServer::OnWrite:4
+
+11:06:46[DEBUG  ]EpollServer::OnWrite send_len 65
+
+11:06:46[DEBUG  ]netlib_send 65
+
+11:06:46[DEBUG  ]connector_cb 4,1
+
+11:06:46[DEBUG  ]EpollServer::OnRead:4
+
+11:06:46[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:06:46[DEBUG  ]Game_Cpp2Py::OnConnector
+
+11:06:46[DEBUG  ]OnConnector: 1,4,{"data":"{\"pos\": 0, \"channel\": 4}","lv":"1","name":"default","sex":"1"}
+11:06:46[DEBUG  ]OnCallback:4
+11:06:46[DEBUG  ]sql_callback
+11:06:46[DEBUG  ]saveobj.loadFromDb:{u'lv': u'1', u'data': u'{"pos": 0, "channel": 4}', u'name': u'default', u'sex': u'1'}
+11:06:46[DEBUG  ]login_callback
+11:06:46[DEBUG  ]MessageQueue::mq2c_Push:9,1,12,{"sex": 1, "result": 1, "name": "default"}
+
+11:06:46[DEBUG  ]eventfd_cb 8,1
+
+11:06:46[DEBUG  ]EpollServer::OnEventfd 8
+
+11:06:46[DEBUG  ]after_load,1,default,None
+11:06:46[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:06:46[DEBUG  ]Buffer::Extend second:64,0,50
+
+11:06:46[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:06:46[DEBUG  ]r_w_cb 9,2
+
+11:06:46[DEBUG  ]EpollServer::OnWrite:9
+
+11:06:46[DEBUG  ]EpollServer::OnWrite send_len 50
+
+11:06:46[DEBUG  ]netlib_send 50
+
+11:06:51[DEBUG  ]saveobj.saveToDb:UPDATE player SET lv=1,data='{"pos": 0, "channel": 7}',name='default',sex=1 WHERE id=1
+11:06:51[DEBUG  ]MessageQueue::MQ2C_Push_Connector:2,0,{"sql": "UPDATE player SET lv=1,data='{\"pos\": 0, \"channel\": 7}',name='default',sex=1 WHERE id=1"}
+
+11:06:51[DEBUG  ]eventfd_cb 8,1
+
+11:06:51[DEBUG  ]EpollServer::OnEventfd 8
+
+11:06:51[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:06:51[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:06:51[DEBUG  ]connector_cb 4,2
+
+11:06:51[DEBUG  ]EpollServer::OnWrite:4
+
+11:06:51[DEBUG  ]EpollServer::OnWrite send_len 109
+
+11:06:51[DEBUG  ]netlib_send 109
+
+11:07:24[DEBUG  ]r_w_cb 9,1
+
+11:07:24[DEBUG  ]EpollServer::OnRead:9
+
+11:07:24[DEBUG  ]RemoveEvent: 9
+
+11:07:24[DEBUG  ]OnFdClosed 9
+
+11:07:24[DEBUG  ]MessageQueue::MQ2S_Push_Close
+
+11:07:24[INFO   ]remote close fd actively: 9
+
+11:07:24[DEBUG  ]Py OnFdClosed:9
+11:07:25[DEBUG  ]EpollServer::OnAccept 5
+
+11:07:25[DEBUG  ]r_w_cb 9,1
+
+11:07:25[DEBUG  ]EpollServer::OnRead:9
+
+11:07:25[DEBUG  ]Buffer::Extend second:1024,0,1024
+
+11:07:25[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:07:25[DEBUG  ]OnServer:9,1,12,{"id": 1, "uid": "abcdefg"}
+11:07:25[DEBUG  ]login_player
+11:07:25[DEBUG  ]player init
+11:07:25[DEBUG  ]saveobj.querydb:SELECT lv,data,name,sex FROM player WHERE id=1
+11:07:25[DEBUG  ]MessageQueue::MQ2C_Push_Connector:1,5,{"sql": "SELECT lv,data,name,sex FROM player WHERE id=1"}
+
+11:07:25[DEBUG  ]OnExec:5
+11:07:25[DEBUG  ]Dispatch_Protocol finish
+11:07:25[DEBUG  ]eventfd_cb 8,1
+
+11:07:25[DEBUG  ]EpollServer::OnEventfd 8
+
+11:07:25[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:07:25[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:07:25[DEBUG  ]connector_cb 4,2
+
+11:07:25[DEBUG  ]EpollServer::OnWrite:4
+
+11:07:25[DEBUG  ]EpollServer::OnWrite send_len 65
+
+11:07:25[DEBUG  ]netlib_send 65
+
+11:07:25[DEBUG  ]connector_cb 4,1
+
+11:07:25[DEBUG  ]EpollServer::OnRead:4
+
+11:07:25[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:07:25[DEBUG  ]Game_Cpp2Py::OnConnector
+
+11:07:25[DEBUG  ]OnConnector: 1,5,{"data":"{\"pos\": 0, \"channel\": 7}","lv":"1","name":"default","sex":"1"}
+11:07:25[DEBUG  ]OnCallback:5
+11:07:25[DEBUG  ]sql_callback
+11:07:25[DEBUG  ]saveobj.loadFromDb:{u'lv': u'1', u'data': u'{"pos": 0, "channel": 7}', u'name': u'default', u'sex': u'1'}
+11:07:25[DEBUG  ]login_callback
+11:07:25[DEBUG  ]MessageQueue::mq2c_Push:9,1,12,{"sex": 1, "result": 1, "name": "default"}
+
+11:07:25[DEBUG  ]eventfd_cb 8,1
+
+11:07:25[DEBUG  ]EpollServer::OnEventfd 8
+
+11:07:25[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:07:25[DEBUG  ]Buffer::Extend second:64,0,50
+
+11:07:25[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:07:25[DEBUG  ]r_w_cb 9,2
+
+11:07:25[DEBUG  ]EpollServer::OnWrite:9
+
+11:07:25[DEBUG  ]EpollServer::OnWrite send_len 50
+
+11:07:25[DEBUG  ]netlib_send 50
+
+11:07:25[DEBUG  ]after_load,1,default,None
+11:07:29[DEBUG  ]saveobj.saveToDb:UPDATE player SET lv=1,data='{"pos": 0, "channel": 7}',name='default',sex=1 WHERE id=1
+11:07:29[DEBUG  ]MessageQueue::MQ2C_Push_Connector:2,0,{"sql": "UPDATE player SET lv=1,data='{\"pos\": 0, \"channel\": 7}',name='default',sex=1 WHERE id=1"}
+
+11:07:29[DEBUG  ]eventfd_cb 8,1
+
+11:07:29[DEBUG  ]EpollServer::OnEventfd 8
+
+11:07:29[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:07:29[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:07:29[DEBUG  ]connector_cb 4,2
+
+11:07:29[DEBUG  ]EpollServer::OnWrite:4
+
+11:07:29[DEBUG  ]EpollServer::OnWrite send_len 109
+
+11:07:29[DEBUG  ]netlib_send 109
+
+11:08:10[DEBUG  ]r_w_cb 9,1
+
+11:08:10[DEBUG  ]EpollServer::OnRead:9
+
+11:08:10[DEBUG  ]RemoveEvent: 9
+
+11:08:10[DEBUG  ]OnFdClosed 9
+
+11:08:10[DEBUG  ]MessageQueue::MQ2S_Push_Close
+
+11:08:10[INFO   ]remote close fd actively: 9
+
+11:08:10[DEBUG  ]Py OnFdClosed:9
+11:08:11[DEBUG  ]EpollServer::OnAccept 5
+
+11:08:11[DEBUG  ]r_w_cb 9,1
+
+11:08:11[DEBUG  ]EpollServer::OnRead:9
+
+11:08:11[DEBUG  ]Buffer::Extend second:1024,0,1024
+
+11:08:11[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:08:11[DEBUG  ]OnServer:9,1,12,{"id": 1, "uid": "abcdefg"}
+11:08:11[DEBUG  ]login_player
+11:08:11[DEBUG  ]player init
+11:08:11[DEBUG  ]saveobj.querydb:SELECT lv,data,name,sex FROM player WHERE id=1
+11:08:11[DEBUG  ]MessageQueue::MQ2C_Push_Connector:1,6,{"sql": "SELECT lv,data,name,sex FROM player WHERE id=1"}
+
+11:08:11[DEBUG  ]OnExec:6
+11:08:11[DEBUG  ]Dispatch_Protocol finish
+11:08:11[DEBUG  ]eventfd_cb 8,1
+
+11:08:11[DEBUG  ]EpollServer::OnEventfd 8
+
+11:08:11[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:08:11[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:08:11[DEBUG  ]connector_cb 4,2
+
+11:08:11[DEBUG  ]EpollServer::OnWrite:4
+
+11:08:11[DEBUG  ]EpollServer::OnWrite send_len 65
+
+11:08:11[DEBUG  ]netlib_send 65
+
+11:08:11[DEBUG  ]connector_cb 4,1
+
+11:08:11[DEBUG  ]EpollServer::OnRead:4
+
+11:08:11[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:08:11[DEBUG  ]Game_Cpp2Py::OnConnector
+
+11:08:11[DEBUG  ]OnConnector: 1,6,{"data":"{\"pos\": 0, \"channel\": 7}","lv":"1","name":"default","sex":"1"}
+11:08:11[DEBUG  ]OnCallback:6
+11:08:11[DEBUG  ]sql_callback
+11:08:11[DEBUG  ]saveobj.loadFromDb:{u'lv': u'1', u'data': u'{"pos": 0, "channel": 7}', u'name': u'default', u'sex': u'1'}
+11:08:11[DEBUG  ]login_callback
+11:08:11[DEBUG  ]MessageQueue::mq2c_Push:9,1,12,{"sex": 1, "result": 1, "name": "default"}
+
+11:08:11[DEBUG  ]after_load,1,default,None
+11:08:11[DEBUG  ]eventfd_cb 8,1
+
+11:08:11[DEBUG  ]EpollServer::OnEventfd 8
+
+11:08:11[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:08:11[DEBUG  ]Buffer::Extend second:64,0,50
+
+11:08:11[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:08:11[DEBUG  ]r_w_cb 9,2
+
+11:08:11[DEBUG  ]EpollServer::OnWrite:9
+
+11:08:11[DEBUG  ]EpollServer::OnWrite send_len 50
+
+11:08:11[DEBUG  ]netlib_send 50
+
+11:08:16[DEBUG  ]saveobj.saveToDb:UPDATE player SET lv=1,data='{"pos": 0, "channel": 4}',name='default',sex=1 WHERE id=1
+11:08:16[DEBUG  ]MessageQueue::MQ2C_Push_Connector:2,0,{"sql": "UPDATE player SET lv=1,data='{\"pos\": 0, \"channel\": 4}',name='default',sex=1 WHERE id=1"}
+
+11:08:16[DEBUG  ]eventfd_cb 8,1
+
+11:08:16[DEBUG  ]EpollServer::OnEventfd 8
+
+11:08:16[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:08:16[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:08:16[DEBUG  ]connector_cb 4,2
+
+11:08:16[DEBUG  ]EpollServer::OnWrite:4
+
+11:08:16[DEBUG  ]EpollServer::OnWrite send_len 109
+
+11:08:16[DEBUG  ]netlib_send 109
+
+11:08:50[DEBUG  ]r_w_cb 9,1
+
+11:08:50[DEBUG  ]EpollServer::OnRead:9
+
+11:08:50[DEBUG  ]RemoveEvent: 9
+
+11:08:50[DEBUG  ]OnFdClosed 9
+
+11:08:50[DEBUG  ]MessageQueue::MQ2S_Push_Close
+
+11:08:50[INFO   ]remote close fd actively: 9
+
+11:08:50[DEBUG  ]Py OnFdClosed:9
+11:08:51[DEBUG  ]EpollServer::OnAccept 5
+
+11:08:51[DEBUG  ]r_w_cb 9,1
+
+11:08:51[DEBUG  ]EpollServer::OnRead:9
+
+11:08:51[DEBUG  ]Buffer::Extend second:1024,0,1024
+
+11:08:51[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:08:51[DEBUG  ]OnServer:9,1,12,{"id": 1, "uid": "abcdefg"}
+11:08:51[DEBUG  ]login_player
+11:08:51[DEBUG  ]player init
+11:08:51[DEBUG  ]saveobj.querydb:SELECT lv,data,name,sex FROM player WHERE id=1
+11:08:51[DEBUG  ]MessageQueue::MQ2C_Push_Connector:1,7,{"sql": "SELECT lv,data,name,sex FROM player WHERE id=1"}
+
+11:08:51[DEBUG  ]OnExec:7
+11:08:51[DEBUG  ]Dispatch_Protocol finish
+11:08:51[DEBUG  ]eventfd_cb 8,1
+
+11:08:51[DEBUG  ]EpollServer::OnEventfd 8
+
+11:08:51[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:08:51[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:08:51[DEBUG  ]connector_cb 4,2
+
+11:08:51[DEBUG  ]EpollServer::OnWrite:4
+
+11:08:51[DEBUG  ]EpollServer::OnWrite send_len 65
+
+11:08:51[DEBUG  ]netlib_send 65
+
+11:08:51[DEBUG  ]connector_cb 4,1
+
+11:08:51[DEBUG  ]EpollServer::OnRead:4
+
+11:08:51[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:08:51[DEBUG  ]Game_Cpp2Py::OnConnector
+
+11:08:51[DEBUG  ]OnConnector: 1,7,{"data":"{\"pos\": 0, \"channel\": 4}","lv":"1","name":"default","sex":"1"}
+11:08:51[DEBUG  ]OnCallback:7
+11:08:51[DEBUG  ]sql_callback
+11:08:51[DEBUG  ]saveobj.loadFromDb:{u'lv': u'1', u'data': u'{"pos": 0, "channel": 4}', u'name': u'default', u'sex': u'1'}
+11:08:51[DEBUG  ]login_callback
+11:08:51[DEBUG  ]MessageQueue::mq2c_Push:9,1,12,{"sex": 1, "result": 1, "name": "default"}
+
+11:08:51[DEBUG  ]after_load,1,default,None
+11:08:51[DEBUG  ]eventfd_cb 8,1
+
+11:08:51[DEBUG  ]EpollServer::OnEventfd 8
+
+11:08:51[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:08:51[DEBUG  ]Buffer::Extend second:64,0,50
+
+11:08:51[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:08:51[DEBUG  ]r_w_cb 9,2
+
+11:08:51[DEBUG  ]EpollServer::OnWrite:9
+
+11:08:51[DEBUG  ]EpollServer::OnWrite send_len 50
+
+11:08:51[DEBUG  ]netlib_send 50
+
+11:08:56[DEBUG  ]saveobj.saveToDb:UPDATE player SET lv=1,data='{"pos": 0, "channel": 3}',name='default',sex=1 WHERE id=1
+11:08:56[DEBUG  ]MessageQueue::MQ2C_Push_Connector:2,0,{"sql": "UPDATE player SET lv=1,data='{\"pos\": 0, \"channel\": 3}',name='default',sex=1 WHERE id=1"}
+
+11:08:56[DEBUG  ]eventfd_cb 8,1
+
+11:08:56[DEBUG  ]EpollServer::OnEventfd 8
+
+11:08:56[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:08:56[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:08:56[DEBUG  ]connector_cb 4,2
+
+11:08:56[DEBUG  ]EpollServer::OnWrite:4
+
+11:08:56[DEBUG  ]EpollServer::OnWrite send_len 109
+
+11:08:56[DEBUG  ]netlib_send 109
+
+11:10:25[DEBUG  ]r_w_cb 9,1
+
+11:10:25[DEBUG  ]EpollServer::OnRead:9
+
+11:10:25[DEBUG  ]RemoveEvent: 9
+
+11:10:25[DEBUG  ]OnFdClosed 9
+
+11:10:25[DEBUG  ]MessageQueue::MQ2S_Push_Close
+
+11:10:25[INFO   ]remote close fd actively: 9
+
+11:10:25[DEBUG  ]Py OnFdClosed:9
+11:10:26[DEBUG  ]EpollServer::OnAccept 5
+
+11:10:26[DEBUG  ]r_w_cb 9,1
+
+11:10:26[DEBUG  ]EpollServer::OnRead:9
+
+11:10:26[DEBUG  ]Buffer::Extend second:1024,0,1024
+
+11:10:26[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:10:26[DEBUG  ]OnServer:9,1,12,{"id": 1, "uid": "abcdefg"}
+11:10:26[DEBUG  ]login_player
+11:10:26[DEBUG  ]player init
+11:10:26[DEBUG  ]saveobj.querydb:SELECT lv,data,name,sex FROM player WHERE id=1
+11:10:26[DEBUG  ]MessageQueue::MQ2C_Push_Connector:1,8,{"sql": "SELECT lv,data,name,sex FROM player WHERE id=1"}
+
+11:10:26[DEBUG  ]OnExec:8
+11:10:26[DEBUG  ]Dispatch_Protocol finish
+11:10:26[DEBUG  ]eventfd_cb 8,1
+
+11:10:26[DEBUG  ]EpollServer::OnEventfd 8
+
+11:10:26[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:10:26[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:10:26[DEBUG  ]connector_cb 4,2
+
+11:10:26[DEBUG  ]EpollServer::OnWrite:4
+
+11:10:26[DEBUG  ]EpollServer::OnWrite send_len 65
+
+11:10:26[DEBUG  ]netlib_send 65
+
+11:10:26[DEBUG  ]connector_cb 4,1
+
+11:10:26[DEBUG  ]EpollServer::OnRead:4
+
+11:10:26[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:10:26[DEBUG  ]Game_Cpp2Py::OnConnector
+
+11:10:26[DEBUG  ]OnConnector: 1,8,{"data":"{\"pos\": 0, \"channel\": 3}","lv":"1","name":"default","sex":"1"}
+11:10:26[DEBUG  ]OnCallback:8
+11:10:26[DEBUG  ]sql_callback
+11:10:26[DEBUG  ]saveobj.loadFromDb:{u'lv': u'1', u'data': u'{"pos": 0, "channel": 3}', u'name': u'default', u'sex': u'1'}
+11:10:26[DEBUG  ]login_callback
+11:10:26[DEBUG  ]MessageQueue::mq2c_Push:9,1,12,{"sex": 1, "result": 1, "name": "default"}
+
+11:10:26[DEBUG  ]after_load,1,default,None
+11:10:26[DEBUG  ]eventfd_cb 8,1
+
+11:10:26[DEBUG  ]EpollServer::OnEventfd 8
+
+11:10:26[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:10:26[DEBUG  ]Buffer::Extend second:64,0,50
+
+11:10:26[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:10:26[DEBUG  ]r_w_cb 9,2
+
+11:10:26[DEBUG  ]EpollServer::OnWrite:9
+
+11:10:26[DEBUG  ]EpollServer::OnWrite send_len 50
+
+11:10:26[DEBUG  ]netlib_send 50
+
+11:10:30[DEBUG  ]saveobj.saveToDb:UPDATE player SET lv=1,data='{"pos": 0, "channel": 6}',name='default',sex=1 WHERE id=1
+11:10:30[DEBUG  ]MessageQueue::MQ2C_Push_Connector:2,0,{"sql": "UPDATE player SET lv=1,data='{\"pos\": 0, \"channel\": 6}',name='default',sex=1 WHERE id=1"}
+
+11:10:30[DEBUG  ]eventfd_cb 8,1
+
+11:10:30[DEBUG  ]EpollServer::OnEventfd 8
+
+11:10:30[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:10:30[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:10:30[DEBUG  ]connector_cb 4,2
+
+11:10:30[DEBUG  ]EpollServer::OnWrite:4
+
+11:10:30[DEBUG  ]EpollServer::OnWrite send_len 109
+
+11:10:30[DEBUG  ]netlib_send 109
+
+11:10:43[DEBUG  ]r_w_cb 9,1
+
+11:10:43[DEBUG  ]EpollServer::OnRead:9
+
+11:10:43[DEBUG  ]RemoveEvent: 9
+
+11:10:43[DEBUG  ]OnFdClosed 9
+
+11:10:43[DEBUG  ]MessageQueue::MQ2S_Push_Close
+
+11:10:43[INFO   ]remote close fd actively: 9
+
+11:10:43[DEBUG  ]Py OnFdClosed:9
+11:10:44[DEBUG  ]EpollServer::OnAccept 5
+
+11:10:44[DEBUG  ]r_w_cb 9,1
+
+11:10:44[DEBUG  ]EpollServer::OnRead:9
+
+11:10:44[DEBUG  ]Buffer::Extend second:1024,0,1024
+
+11:10:44[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:10:44[DEBUG  ]OnServer:9,1,12,{"id": 1, "uid": "abcdefg"}
+11:10:44[DEBUG  ]login_player
+11:10:44[DEBUG  ]player init
+11:10:44[DEBUG  ]saveobj.querydb:SELECT lv,data,name,sex FROM player WHERE id=1
+11:10:44[DEBUG  ]MessageQueue::MQ2C_Push_Connector:1,9,{"sql": "SELECT lv,data,name,sex FROM player WHERE id=1"}
+
+11:10:44[DEBUG  ]OnExec:9
+11:10:44[DEBUG  ]Dispatch_Protocol finish
+11:10:44[DEBUG  ]eventfd_cb 8,1
+
+11:10:44[DEBUG  ]EpollServer::OnEventfd 8
+
+11:10:44[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:10:44[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:10:44[DEBUG  ]connector_cb 4,2
+
+11:10:44[DEBUG  ]EpollServer::OnWrite:4
+
+11:10:44[DEBUG  ]EpollServer::OnWrite send_len 65
+
+11:10:44[DEBUG  ]netlib_send 65
+
+11:10:44[DEBUG  ]connector_cb 4,1
+
+11:10:44[DEBUG  ]EpollServer::OnRead:4
+
+11:10:44[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:10:44[DEBUG  ]Game_Cpp2Py::OnConnector
+
+11:10:44[DEBUG  ]OnConnector: 1,9,{"data":"{\"pos\": 0, \"channel\": 6}","lv":"1","name":"default","sex":"1"}
+11:10:44[DEBUG  ]OnCallback:9
+11:10:44[DEBUG  ]sql_callback
+11:10:44[DEBUG  ]saveobj.loadFromDb:{u'lv': u'1', u'data': u'{"pos": 0, "channel": 6}', u'name': u'default', u'sex': u'1'}
+11:10:44[DEBUG  ]login_callback
+11:10:44[DEBUG  ]MessageQueue::mq2c_Push:9,1,12,{"sex": 1, "result": 1, "name": "default"}
+
+11:10:44[DEBUG  ]after_load,1,default,None
+11:10:44[DEBUG  ]eventfd_cb 8,1
+
+11:10:44[DEBUG  ]EpollServer::OnEventfd 8
+
+11:10:44[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:10:44[DEBUG  ]Buffer::Extend second:64,0,50
+
+11:10:44[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:10:44[DEBUG  ]r_w_cb 9,2
+
+11:10:44[DEBUG  ]EpollServer::OnWrite:9
+
+11:10:44[DEBUG  ]EpollServer::OnWrite send_len 50
+
+11:10:44[DEBUG  ]netlib_send 50
+
+11:10:44[DEBUG  ]EpollServer::OnAccept 5
+
+11:10:44[DEBUG  ]r_w_cb 10,1
+
+11:10:44[DEBUG  ]EpollServer::OnRead:10
+
+11:10:44[DEBUG  ]Buffer::Extend second:1024,0,1024
+
+11:10:44[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:10:44[DEBUG  ]OnServer:10,1,12,{"id": 2, "uid": "abcdefg"}
+11:10:44[DEBUG  ]login_player
+11:10:44[DEBUG  ]player init
+11:10:44[DEBUG  ]saveobj.querydb:SELECT lv,data,name,sex FROM player WHERE id=2
+11:10:44[DEBUG  ]MessageQueue::MQ2C_Push_Connector:1,10,{"sql": "SELECT lv,data,name,sex FROM player WHERE id=2"}
+
+11:10:44[DEBUG  ]OnExec:10
+11:10:44[DEBUG  ]Dispatch_Protocol finish
+11:10:44[DEBUG  ]eventfd_cb 8,1
+
+11:10:44[DEBUG  ]EpollServer::OnEventfd 8
+
+11:10:44[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:10:44[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:10:44[DEBUG  ]connector_cb 4,2
+
+11:10:44[DEBUG  ]EpollServer::OnWrite:4
+
+11:10:44[DEBUG  ]EpollServer::OnWrite send_len 65
+
+11:10:44[DEBUG  ]netlib_send 65
+
+11:10:44[DEBUG  ]connector_cb 4,1
+
+11:10:44[DEBUG  ]EpollServer::OnRead:4
+
+11:10:44[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:10:44[DEBUG  ]Game_Cpp2Py::OnConnector
+
+11:10:44[DEBUG  ]OnConnector: 1,10,{"data":"{\"pos\": 1, \"channel\": 1}","lv":"2","name":"hahahaaaa","sex":"1"}
+11:10:44[DEBUG  ]OnCallback:10
+11:10:44[DEBUG  ]sql_callback
+11:10:44[DEBUG  ]saveobj.loadFromDb:{u'lv': u'2', u'data': u'{"pos": 1, "channel": 1}', u'name': u'hahahaaaa', u'sex': u'1'}
+11:10:44[DEBUG  ]login_callback
+11:10:44[DEBUG  ]MessageQueue::mq2c_Push:10,1,12,{"sex": 1, "result": 1, "name": "hahahaaaa"}
+
+11:10:44[DEBUG  ]after_load,2,hahahaaaa,None
+11:10:44[DEBUG  ]eventfd_cb 8,1
+
+11:10:44[DEBUG  ]EpollServer::OnEventfd 8
+
+11:10:44[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:10:44[DEBUG  ]Buffer::Extend second:64,0,52
+
+11:10:44[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:10:44[DEBUG  ]r_w_cb 10,2
+
+11:10:44[DEBUG  ]EpollServer::OnWrite:10
+
+11:10:44[DEBUG  ]EpollServer::OnWrite send_len 52
+
+11:10:44[DEBUG  ]netlib_send 52
+
+11:10:49[DEBUG  ]saveobj.saveToDb:UPDATE player SET lv=1,data='{"pos": 0, "channel": 8}',name='default',sex=1 WHERE id=1
+11:10:49[DEBUG  ]MessageQueue::MQ2C_Push_Connector:2,0,{"sql": "UPDATE player SET lv=1,data='{\"pos\": 0, \"channel\": 8}',name='default',sex=1 WHERE id=1"}
+
+11:10:49[DEBUG  ]saveobj.saveToDb:UPDATE player SET lv=2,data='{"pos": 1, "channel": 2}',name='hahahaaaa',sex=1 WHERE id=2
+11:10:49[DEBUG  ]MessageQueue::MQ2C_Push_Connector:2,0,{"sql": "UPDATE player SET lv=2,data='{\"pos\": 1, \"channel\": 2}',name='hahahaaaa',sex=1 WHERE id=2"}
+
+11:10:49[DEBUG  ]eventfd_cb 8,1
+
+11:10:49[DEBUG  ]EpollServer::OnEventfd 8
+
+11:10:49[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:10:49[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:10:49[DEBUG  ]Buffer::Extend second:256,109,111
+
+11:10:49[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:10:49[DEBUG  ]connector_cb 4,2
+
+11:10:49[DEBUG  ]EpollServer::OnWrite:4
+
+11:10:49[DEBUG  ]EpollServer::OnWrite send_len 220
+
+11:10:49[DEBUG  ]netlib_send 220
+
+11:11:32[DEBUG  ]r_w_cb 10,1
+
+11:11:32[DEBUG  ]EpollServer::OnRead:10
+
+11:11:32[DEBUG  ]RemoveEvent: 10
+
+11:11:32[DEBUG  ]OnFdClosed 10
+
+11:11:32[DEBUG  ]MessageQueue::MQ2S_Push_Close
+
+11:11:32[INFO   ]remote close fd actively: 10
+
+11:11:32[DEBUG  ]r_w_cb 9,1
+
+11:11:32[DEBUG  ]EpollServer::OnRead:9
+
+11:11:32[DEBUG  ]RemoveEvent: 9
+
+11:11:32[DEBUG  ]OnFdClosed 9
+
+11:11:32[DEBUG  ]MessageQueue::MQ2S_Push_Close
+
+11:11:32[INFO   ]remote close fd actively: 9
+
+11:11:32[DEBUG  ]Py OnFdClosed:10
+11:11:32[DEBUG  ]Py OnFdClosed:9
+11:11:32[DEBUG  ]EpollServer::OnAccept 5
+
+11:11:32[DEBUG  ]r_w_cb 9,1
+
+11:11:32[DEBUG  ]EpollServer::OnRead:9
+
+11:11:32[DEBUG  ]Buffer::Extend second:1024,0,1024
+
+11:11:32[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:11:32[DEBUG  ]OnServer:9,1,12,{"id": 1, "uid": "abcdefg"}
+11:11:32[DEBUG  ]login_player
+11:11:32[DEBUG  ]player init
+11:11:32[DEBUG  ]saveobj.querydb:SELECT lv,data,name,sex FROM player WHERE id=1
+11:11:32[DEBUG  ]MessageQueue::MQ2C_Push_Connector:1,11,{"sql": "SELECT lv,data,name,sex FROM player WHERE id=1"}
+
+11:11:32[DEBUG  ]OnExec:11
+11:11:32[DEBUG  ]Dispatch_Protocol finish
+11:11:32[DEBUG  ]eventfd_cb 8,1
+
+11:11:32[DEBUG  ]EpollServer::OnEventfd 8
+
+11:11:32[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:32[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:32[DEBUG  ]connector_cb 4,2
+
+11:11:32[DEBUG  ]EpollServer::OnWrite:4
+
+11:11:32[DEBUG  ]EpollServer::OnWrite send_len 65
+
+11:11:32[DEBUG  ]netlib_send 65
+
+11:11:32[DEBUG  ]connector_cb 4,1
+
+11:11:32[DEBUG  ]EpollServer::OnRead:4
+
+11:11:32[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:11:32[DEBUG  ]Game_Cpp2Py::OnConnector
+
+11:11:32[DEBUG  ]OnConnector: 1,11,{"data":"{\"pos\": 0, \"channel\": 8}","lv":"1","name":"default","sex":"1"}
+11:11:32[DEBUG  ]OnCallback:11
+11:11:32[DEBUG  ]sql_callback
+11:11:32[DEBUG  ]saveobj.loadFromDb:{u'lv': u'1', u'data': u'{"pos": 0, "channel": 8}', u'name': u'default', u'sex': u'1'}
+11:11:32[DEBUG  ]login_callback
+11:11:32[DEBUG  ]MessageQueue::mq2c_Push:9,1,12,{"sex": 1, "result": 1, "name": "default"}
+
+11:11:32[DEBUG  ]after_load,1,default,None
+11:11:32[DEBUG  ]eventfd_cb 8,1
+
+11:11:32[DEBUG  ]EpollServer::OnEventfd 8
+
+11:11:32[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:32[DEBUG  ]Buffer::Extend second:64,0,50
+
+11:11:32[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:32[DEBUG  ]r_w_cb 9,2
+
+11:11:32[DEBUG  ]EpollServer::OnWrite:9
+
+11:11:32[DEBUG  ]EpollServer::OnWrite send_len 50
+
+11:11:32[DEBUG  ]netlib_send 50
+
+11:11:32[DEBUG  ]EpollServer::OnAccept 5
+
+11:11:32[DEBUG  ]r_w_cb 10,1
+
+11:11:32[DEBUG  ]EpollServer::OnRead:10
+
+11:11:32[DEBUG  ]Buffer::Extend second:1024,0,1024
+
+11:11:32[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:11:32[DEBUG  ]OnServer:10,1,12,{"id": 2, "uid": "abcdefg"}
+11:11:32[DEBUG  ]login_player
+11:11:32[DEBUG  ]player init
+11:11:32[DEBUG  ]saveobj.querydb:SELECT lv,data,name,sex FROM player WHERE id=2
+11:11:32[DEBUG  ]MessageQueue::MQ2C_Push_Connector:1,12,{"sql": "SELECT lv,data,name,sex FROM player WHERE id=2"}
+
+11:11:32[DEBUG  ]OnExec:12
+11:11:32[DEBUG  ]Dispatch_Protocol finish
+11:11:32[DEBUG  ]eventfd_cb 8,1
+
+11:11:32[DEBUG  ]EpollServer::OnEventfd 8
+
+11:11:32[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:32[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:32[DEBUG  ]connector_cb 4,2
+
+11:11:32[DEBUG  ]EpollServer::OnWrite:4
+
+11:11:32[DEBUG  ]EpollServer::OnWrite send_len 65
+
+11:11:32[DEBUG  ]netlib_send 65
+
+11:11:32[DEBUG  ]connector_cb 4,1
+
+11:11:32[DEBUG  ]EpollServer::OnRead:4
+
+11:11:32[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:11:32[DEBUG  ]Game_Cpp2Py::OnConnector
+
+11:11:32[DEBUG  ]OnConnector: 1,12,{"data":"{\"pos\": 1, \"channel\": 2}","lv":"2","name":"hahahaaaa","sex":"1"}
+11:11:32[DEBUG  ]OnCallback:12
+11:11:32[DEBUG  ]sql_callback
+11:11:32[DEBUG  ]saveobj.loadFromDb:{u'lv': u'2', u'data': u'{"pos": 1, "channel": 2}', u'name': u'hahahaaaa', u'sex': u'1'}
+11:11:32[DEBUG  ]login_callback
+11:11:32[DEBUG  ]MessageQueue::mq2c_Push:10,1,12,{"sex": 1, "result": 1, "name": "hahahaaaa"}
+
+11:11:32[DEBUG  ]after_load,2,hahahaaaa,None
+11:11:32[DEBUG  ]eventfd_cb 8,1
+
+11:11:32[DEBUG  ]EpollServer::OnEventfd 8
+
+11:11:32[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:32[DEBUG  ]Buffer::Extend second:64,0,52
+
+11:11:32[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:32[DEBUG  ]r_w_cb 10,2
+
+11:11:32[DEBUG  ]EpollServer::OnWrite:10
+
+11:11:32[DEBUG  ]EpollServer::OnWrite send_len 52
+
+11:11:32[DEBUG  ]netlib_send 52
+
+11:11:37[DEBUG  ]saveobj.saveToDb:UPDATE player SET lv=1,data='{"pos": 0, "channel": 1}',name='default',sex=1 WHERE id=1
+11:11:37[DEBUG  ]MessageQueue::MQ2C_Push_Connector:2,0,{"sql": "UPDATE player SET lv=1,data='{\"pos\": 0, \"channel\": 1}',name='default',sex=1 WHERE id=1"}
+
+11:11:37[DEBUG  ]saveobj.saveToDb:UPDATE player SET lv=2,data='{"pos": 1, "channel": 4}',name='hahahaaaa',sex=1 WHERE id=2
+11:11:37[DEBUG  ]MessageQueue::MQ2C_Push_Connector:2,0,{"sql": "UPDATE player SET lv=2,data='{\"pos\": 1, \"channel\": 4}',name='hahahaaaa',sex=1 WHERE id=2"}
+
+11:11:37[DEBUG  ]eventfd_cb 8,1
+
+11:11:37[DEBUG  ]EpollServer::OnEventfd 8
+
+11:11:37[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:37[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:37[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:37[DEBUG  ]connector_cb 4,2
+
+11:11:37[DEBUG  ]EpollServer::OnWrite:4
+
+11:11:37[DEBUG  ]EpollServer::OnWrite send_len 220
+
+11:11:37[DEBUG  ]netlib_send 220
+
+11:11:52[DEBUG  ]r_w_cb 10,1
+
+11:11:52[DEBUG  ]EpollServer::OnRead:10
+
+11:11:52[DEBUG  ]RemoveEvent: 10
+
+11:11:52[DEBUG  ]OnFdClosed 10
+
+11:11:52[DEBUG  ]MessageQueue::MQ2S_Push_Close
+
+11:11:52[INFO   ]remote close fd actively: 10
+
+11:11:52[DEBUG  ]r_w_cb 9,1
+
+11:11:52[DEBUG  ]EpollServer::OnRead:9
+
+11:11:52[DEBUG  ]RemoveEvent: 9
+
+11:11:52[DEBUG  ]OnFdClosed 9
+
+11:11:52[DEBUG  ]MessageQueue::MQ2S_Push_Close
+
+11:11:52[INFO   ]remote close fd actively: 9
+
+11:11:52[DEBUG  ]Py OnFdClosed:10
+11:11:52[DEBUG  ]Py OnFdClosed:9
+11:11:53[DEBUG  ]EpollServer::OnAccept 5
+
+11:11:53[DEBUG  ]r_w_cb 9,1
+
+11:11:53[DEBUG  ]EpollServer::OnRead:9
+
+11:11:53[DEBUG  ]Buffer::Extend second:1024,0,1024
+
+11:11:53[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:11:53[DEBUG  ]OnServer:9,1,12,{"id": 1, "uid": "abcdefg"}
+11:11:53[DEBUG  ]login_player
+11:11:53[DEBUG  ]player init
+11:11:53[DEBUG  ]saveobj.querydb:SELECT lv,data,name,sex FROM player WHERE id=1
+11:11:53[DEBUG  ]MessageQueue::MQ2C_Push_Connector:1,13,{"sql": "SELECT lv,data,name,sex FROM player WHERE id=1"}
+
+11:11:53[DEBUG  ]OnExec:13
+11:11:53[DEBUG  ]Dispatch_Protocol finish
+11:11:53[DEBUG  ]eventfd_cb 8,1
+
+11:11:53[DEBUG  ]EpollServer::OnEventfd 8
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]connector_cb 4,2
+
+11:11:53[DEBUG  ]EpollServer::OnWrite:4
+
+11:11:53[DEBUG  ]EpollServer::OnWrite send_len 65
+
+11:11:53[DEBUG  ]netlib_send 65
+
+11:11:53[DEBUG  ]connector_cb 4,1
+
+11:11:53[DEBUG  ]EpollServer::OnRead:4
+
+11:11:53[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:11:53[DEBUG  ]Game_Cpp2Py::OnConnector
+
+11:11:53[DEBUG  ]OnConnector: 1,13,{"data":"{\"pos\": 0, \"channel\": 1}","lv":"1","name":"default","sex":"1"}
+11:11:53[DEBUG  ]OnCallback:13
+11:11:53[DEBUG  ]sql_callback
+11:11:53[DEBUG  ]saveobj.loadFromDb:{u'lv': u'1', u'data': u'{"pos": 0, "channel": 1}', u'name': u'default', u'sex': u'1'}
+11:11:53[DEBUG  ]login_callback
+11:11:53[DEBUG  ]MessageQueue::mq2c_Push:9,1,12,{"sex": 1, "result": 1, "name": "default"}
+
+11:11:53[DEBUG  ]after_load,1,default,None
+11:11:53[DEBUG  ]eventfd_cb 8,1
+
+11:11:53[DEBUG  ]EpollServer::OnEventfd 8
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]Buffer::Extend second:64,0,50
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]r_w_cb 9,2
+
+11:11:53[DEBUG  ]EpollServer::OnWrite:9
+
+11:11:53[DEBUG  ]EpollServer::OnWrite send_len 50
+
+11:11:53[DEBUG  ]netlib_send 50
+
+11:11:53[DEBUG  ]EpollServer::OnAccept 5
+
+11:11:53[DEBUG  ]r_w_cb 10,1
+
+11:11:53[DEBUG  ]EpollServer::OnRead:10
+
+11:11:53[DEBUG  ]Buffer::Extend second:1024,0,1024
+
+11:11:53[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:11:53[DEBUG  ]OnServer:10,1,12,{"id": 2, "uid": "abcdefg"}
+11:11:53[DEBUG  ]login_player
+11:11:53[DEBUG  ]player init
+11:11:53[DEBUG  ]saveobj.querydb:SELECT lv,data,name,sex FROM player WHERE id=2
+11:11:53[DEBUG  ]MessageQueue::MQ2C_Push_Connector:1,14,{"sql": "SELECT lv,data,name,sex FROM player WHERE id=2"}
+
+11:11:53[DEBUG  ]OnExec:14
+11:11:53[DEBUG  ]Dispatch_Protocol finish
+11:11:53[DEBUG  ]eventfd_cb 8,1
+
+11:11:53[DEBUG  ]EpollServer::OnEventfd 8
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]connector_cb 4,2
+
+11:11:53[DEBUG  ]EpollServer::OnWrite:4
+
+11:11:53[DEBUG  ]EpollServer::OnWrite send_len 65
+
+11:11:53[DEBUG  ]netlib_send 65
+
+11:11:53[DEBUG  ]connector_cb 4,1
+
+11:11:53[DEBUG  ]EpollServer::OnRead:4
+
+11:11:53[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:11:53[DEBUG  ]Game_Cpp2Py::OnConnector
+
+11:11:53[DEBUG  ]OnConnector: 1,14,{"data":"{\"pos\": 1, \"channel\": 4}","lv":"2","name":"hahahaaaa","sex":"1"}
+11:11:53[DEBUG  ]OnCallback:14
+11:11:53[DEBUG  ]sql_callback
+11:11:53[DEBUG  ]saveobj.loadFromDb:{u'lv': u'2', u'data': u'{"pos": 1, "channel": 4}', u'name': u'hahahaaaa', u'sex': u'1'}
+11:11:53[DEBUG  ]login_callback
+11:11:53[DEBUG  ]MessageQueue::mq2c_Push:10,1,12,{"sex": 1, "result": 1, "name": "hahahaaaa"}
+
+11:11:53[DEBUG  ]after_load,2,hahahaaaa,None
+11:11:53[DEBUG  ]eventfd_cb 8,1
+
+11:11:53[DEBUG  ]EpollServer::OnEventfd 8
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]Buffer::Extend second:64,0,52
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]r_w_cb 10,2
+
+11:11:53[DEBUG  ]EpollServer::OnWrite:10
+
+11:11:53[DEBUG  ]EpollServer::OnWrite send_len 52
+
+11:11:53[DEBUG  ]netlib_send 52
+
+11:11:53[DEBUG  ]EpollServer::OnAccept 5
+
+11:11:53[DEBUG  ]r_w_cb 11,1
+
+11:11:53[DEBUG  ]EpollServer::OnRead:11
+
+11:11:53[DEBUG  ]Buffer::Extend second:1024,0,1024
+
+11:11:53[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:11:53[DEBUG  ]OnServer:11,1,12,{"id": 3, "uid": "abcdefg"}
+11:11:53[DEBUG  ]login_player
+11:11:53[DEBUG  ]player init
+11:11:53[DEBUG  ]saveobj.querydb:SELECT lv,data,name,sex FROM player WHERE id=3
+11:11:53[DEBUG  ]MessageQueue::MQ2C_Push_Connector:1,15,{"sql": "SELECT lv,data,name,sex FROM player WHERE id=3"}
+
+11:11:53[DEBUG  ]OnExec:15
+11:11:53[DEBUG  ]Dispatch_Protocol finish
+11:11:53[DEBUG  ]eventfd_cb 8,1
+
+11:11:53[DEBUG  ]EpollServer::OnEventfd 8
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]connector_cb 4,2
+
+11:11:53[DEBUG  ]EpollServer::OnWrite:4
+
+11:11:53[DEBUG  ]EpollServer::OnWrite send_len 65
+
+11:11:53[DEBUG  ]netlib_send 65
+
+11:11:53[DEBUG  ]connector_cb 4,1
+
+11:11:53[DEBUG  ]EpollServer::OnRead:4
+
+11:11:53[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:11:53[DEBUG  ]Game_Cpp2Py::OnConnector
+
+11:11:53[DEBUG  ]OnConnector: 1,15,{"data":"{\"pos\": 0, \"channel\": 6}","lv":"1","name":"default","sex":"1"}
+11:11:53[DEBUG  ]OnCallback:15
+11:11:53[DEBUG  ]sql_callback
+11:11:53[DEBUG  ]saveobj.loadFromDb:{u'lv': u'1', u'data': u'{"pos": 0, "channel": 6}', u'name': u'default', u'sex': u'1'}
+11:11:53[DEBUG  ]login_callback
+11:11:53[DEBUG  ]MessageQueue::mq2c_Push:11,1,12,{"sex": 1, "result": 1, "name": "default"}
+
+11:11:53[DEBUG  ]after_load,3,default,None
+11:11:53[DEBUG  ]eventfd_cb 8,1
+
+11:11:53[DEBUG  ]EpollServer::OnEventfd 8
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]Buffer::Extend second:64,0,50
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]r_w_cb 11,2
+
+11:11:53[DEBUG  ]EpollServer::OnWrite:11
+
+11:11:53[DEBUG  ]EpollServer::OnWrite send_len 50
+
+11:11:53[DEBUG  ]netlib_send 50
+
+11:11:53[DEBUG  ]EpollServer::OnAccept 5
+
+11:11:53[DEBUG  ]r_w_cb 12,1
+
+11:11:53[DEBUG  ]EpollServer::OnRead:12
+
+11:11:53[DEBUG  ]Buffer::Extend second:1024,0,1024
+
+11:11:53[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:11:53[DEBUG  ]OnServer:12,1,12,{"id": 4, "uid": "abcdefg"}
+11:11:53[DEBUG  ]login_player
+11:11:53[DEBUG  ]player init
+11:11:53[DEBUG  ]saveobj.querydb:SELECT lv,data,name,sex FROM player WHERE id=4
+11:11:53[DEBUG  ]MessageQueue::MQ2C_Push_Connector:1,16,{"sql": "SELECT lv,data,name,sex FROM player WHERE id=4"}
+
+11:11:53[DEBUG  ]OnExec:16
+11:11:53[DEBUG  ]Dispatch_Protocol finish
+11:11:53[DEBUG  ]eventfd_cb 8,1
+
+11:11:53[DEBUG  ]EpollServer::OnEventfd 8
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]connector_cb 4,2
+
+11:11:53[DEBUG  ]EpollServer::OnWrite:4
+
+11:11:53[DEBUG  ]EpollServer::OnWrite send_len 65
+
+11:11:53[DEBUG  ]netlib_send 65
+
+11:11:53[DEBUG  ]connector_cb 4,1
+
+11:11:53[DEBUG  ]EpollServer::OnRead:4
+
+11:11:53[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:11:53[DEBUG  ]Game_Cpp2Py::OnConnector
+
+11:11:53[DEBUG  ]OnConnector: 1,16,{"data":"{\"pos\": 0, \"channel\": 4}","lv":"1","name":"default","sex":"1"}
+11:11:53[DEBUG  ]OnCallback:16
+11:11:53[DEBUG  ]sql_callback
+11:11:53[DEBUG  ]saveobj.loadFromDb:{u'lv': u'1', u'data': u'{"pos": 0, "channel": 4}', u'name': u'default', u'sex': u'1'}
+11:11:53[DEBUG  ]login_callback
+11:11:53[DEBUG  ]MessageQueue::mq2c_Push:12,1,12,{"sex": 1, "result": 1, "name": "default"}
+
+11:11:53[DEBUG  ]after_load,4,default,None
+11:11:53[DEBUG  ]eventfd_cb 8,1
+
+11:11:53[DEBUG  ]EpollServer::OnEventfd 8
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]Buffer::Extend second:64,0,50
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]r_w_cb 12,2
+
+11:11:53[DEBUG  ]EpollServer::OnWrite:12
+
+11:11:53[DEBUG  ]EpollServer::OnWrite send_len 50
+
+11:11:53[DEBUG  ]netlib_send 50
+
+11:11:53[DEBUG  ]EpollServer::OnAccept 5
+
+11:11:53[DEBUG  ]r_w_cb 13,1
+
+11:11:53[DEBUG  ]EpollServer::OnRead:13
+
+11:11:53[DEBUG  ]Buffer::Extend second:1024,0,1024
+
+11:11:53[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:11:53[DEBUG  ]OnServer:13,1,12,{"id": 5, "uid": "abcdefg"}
+11:11:53[DEBUG  ]login_player
+11:11:53[DEBUG  ]player init
+11:11:53[DEBUG  ]saveobj.querydb:SELECT lv,data,name,sex FROM player WHERE id=5
+11:11:53[DEBUG  ]MessageQueue::MQ2C_Push_Connector:1,17,{"sql": "SELECT lv,data,name,sex FROM player WHERE id=5"}
+
+11:11:53[DEBUG  ]OnExec:17
+11:11:53[DEBUG  ]Dispatch_Protocol finish
+11:11:53[DEBUG  ]eventfd_cb 8,1
+
+11:11:53[DEBUG  ]EpollServer::OnEventfd 8
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]connector_cb 4,2
+
+11:11:53[DEBUG  ]EpollServer::OnWrite:4
+
+11:11:53[DEBUG  ]EpollServer::OnWrite send_len 65
+
+11:11:53[DEBUG  ]netlib_send 65
+
+11:11:53[DEBUG  ]connector_cb 4,1
+
+11:11:53[DEBUG  ]EpollServer::OnRead:4
+
+11:11:53[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:11:53[DEBUG  ]Game_Cpp2Py::OnConnector
+
+11:11:53[DEBUG  ]OnConnector: 1,17,{"data":"{\"pos\": 0, \"channel\": 8}","lv":"1","name":"default","sex":"1"}
+11:11:53[DEBUG  ]OnCallback:17
+11:11:53[DEBUG  ]sql_callback
+11:11:53[DEBUG  ]saveobj.loadFromDb:{u'lv': u'1', u'data': u'{"pos": 0, "channel": 8}', u'name': u'default', u'sex': u'1'}
+11:11:53[DEBUG  ]login_callback
+11:11:53[DEBUG  ]MessageQueue::mq2c_Push:13,1,12,{"sex": 1, "result": 1, "name": "default"}
+
+11:11:53[DEBUG  ]after_load,5,default,None
+11:11:53[DEBUG  ]eventfd_cb 8,1
+
+11:11:53[DEBUG  ]EpollServer::OnEventfd 8
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]Buffer::Extend second:64,0,50
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]r_w_cb 13,2
+
+11:11:53[DEBUG  ]EpollServer::OnWrite:13
+
+11:11:53[DEBUG  ]EpollServer::OnWrite send_len 50
+
+11:11:53[DEBUG  ]netlib_send 50
+

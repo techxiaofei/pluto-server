@@ -1,0 +1,8 @@
+13:43:46[ERROR  ]mysql_real_query error:Duplicate entry '3' for key 'PRIMARY'
+
+13:43:48[ERROR  ]mysql_real_query error:Duplicate entry '22' for key 'PRIMARY'
+
+13:43:56[ERROR  ]mysql_real_query error:Duplicate entry '100' for key 'PRIMARY'
+
+13:43:56[ERROR  ]mysql_real_query error:Duplicate entry '101' for key 'PRIMARY'
+

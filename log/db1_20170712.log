@@ -1,0 +1,542 @@
+11:00:35[DEBUG  ]r_w_cb 9,1
+
+11:00:35[DEBUG  ]EpollServer::OnRead:9
+
+11:00:35[DEBUG  ]RemoveEvent: 9
+
+11:00:35[DEBUG  ]OnFdClosed 9
+
+11:00:35[DEBUG  ]MessageQueue::MQ2S_Push_Close
+
+11:00:35[INFO   ]remote close fd actively: 9
+
+11:00:35[DEBUG  ]DBWorker::MQ_TYPE_CLOSE
+11:00:41[DEBUG  ]EpollServer::OnAccept 4
+
+11:05:06[DEBUG  ]r_w_cb 9,1
+
+11:05:06[DEBUG  ]EpollServer::OnRead:9
+
+11:05:06[DEBUG  ]Buffer::Extend second:1024,0,1024
+
+11:05:06[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:05:06[DEBUG  ]DBWorker::sql SELECT lv,data,name,sex FROM player WHERE id=1
+11:05:06[DEBUG  ]CDBConn::ExecuteQuery:SELECT lv,data,name,sex FROM player WHERE id=1
+
+11:05:06[DEBUG  ]MessageQueue::mq2c_Push:9,1,2,{"data":"{\"pos\": 0, \"channel\": 7}","lv":"1","name":"default","sex":"1"}
+
+11:05:06[DEBUG  ]eventfd_cb 7,1
+
+11:05:06[DEBUG  ]EpollServer::OnEventfd 7
+
+11:05:06[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:05:06[DEBUG  ]Buffer::Extend second:128,0,83
+
+11:05:06[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:05:06[DEBUG  ]r_w_cb 9,2
+
+11:05:06[DEBUG  ]EpollServer::OnWrite:9
+
+11:05:06[DEBUG  ]EpollServer::OnWrite send_len 83
+
+11:05:06[DEBUG  ]netlib_send 83
+
+11:05:11[DEBUG  ]r_w_cb 9,1
+
+11:05:11[DEBUG  ]EpollServer::OnRead:9
+
+11:05:11[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:05:11[DEBUG  ]DBWorker::sql UPDATE player SET lv=1,data='{"pos": 0, "channel": 1}',name='default',sex=1 WHERE id=1
+11:05:11[DEBUG  ]DBWorker::DealUpdateSql success
+
+11:06:02[DEBUG  ]r_w_cb 9,1
+
+11:06:02[DEBUG  ]EpollServer::OnRead:9
+
+11:06:02[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:06:02[DEBUG  ]DBWorker::sql SELECT lv,data,name,sex FROM player WHERE id=1
+11:06:02[DEBUG  ]CDBConn::ExecuteQuery:SELECT lv,data,name,sex FROM player WHERE id=1
+
+11:06:02[DEBUG  ]MessageQueue::mq2c_Push:9,1,3,{"data":"{\"pos\": 0, \"channel\": 1}","lv":"1","name":"default","sex":"1"}
+
+11:06:02[DEBUG  ]eventfd_cb 7,1
+
+11:06:02[DEBUG  ]EpollServer::OnEventfd 7
+
+11:06:02[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:06:02[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:06:02[DEBUG  ]r_w_cb 9,2
+
+11:06:02[DEBUG  ]EpollServer::OnWrite:9
+
+11:06:02[DEBUG  ]EpollServer::OnWrite send_len 83
+
+11:06:02[DEBUG  ]netlib_send 83
+
+11:06:06[DEBUG  ]r_w_cb 9,1
+
+11:06:06[DEBUG  ]EpollServer::OnRead:9
+
+11:06:06[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:06:06[DEBUG  ]DBWorker::sql UPDATE player SET lv=1,data='{"pos": 0, "channel": 4}',name='default',sex=1 WHERE id=1
+11:06:06[DEBUG  ]DBWorker::DealUpdateSql success
+
+11:06:46[DEBUG  ]r_w_cb 9,1
+
+11:06:46[DEBUG  ]EpollServer::OnRead:9
+
+11:06:46[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:06:46[DEBUG  ]DBWorker::sql SELECT lv,data,name,sex FROM player WHERE id=1
+11:06:46[DEBUG  ]CDBConn::ExecuteQuery:SELECT lv,data,name,sex FROM player WHERE id=1
+
+11:06:46[DEBUG  ]MessageQueue::mq2c_Push:9,1,4,{"data":"{\"pos\": 0, \"channel\": 4}","lv":"1","name":"default","sex":"1"}
+
+11:06:46[DEBUG  ]eventfd_cb 7,1
+
+11:06:46[DEBUG  ]EpollServer::OnEventfd 7
+
+11:06:46[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:06:46[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:06:46[DEBUG  ]r_w_cb 9,2
+
+11:06:46[DEBUG  ]EpollServer::OnWrite:9
+
+11:06:46[DEBUG  ]EpollServer::OnWrite send_len 83
+
+11:06:46[DEBUG  ]netlib_send 83
+
+11:06:51[DEBUG  ]r_w_cb 9,1
+
+11:06:51[DEBUG  ]EpollServer::OnRead:9
+
+11:06:51[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:06:51[DEBUG  ]DBWorker::sql UPDATE player SET lv=1,data='{"pos": 0, "channel": 7}',name='default',sex=1 WHERE id=1
+11:06:51[DEBUG  ]DBWorker::DealUpdateSql success
+
+11:07:25[DEBUG  ]r_w_cb 9,1
+
+11:07:25[DEBUG  ]EpollServer::OnRead:9
+
+11:07:25[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:07:25[DEBUG  ]DBWorker::sql SELECT lv,data,name,sex FROM player WHERE id=1
+11:07:25[DEBUG  ]CDBConn::ExecuteQuery:SELECT lv,data,name,sex FROM player WHERE id=1
+
+11:07:25[DEBUG  ]MessageQueue::mq2c_Push:9,1,5,{"data":"{\"pos\": 0, \"channel\": 7}","lv":"1","name":"default","sex":"1"}
+
+11:07:25[DEBUG  ]eventfd_cb 7,1
+
+11:07:25[DEBUG  ]EpollServer::OnEventfd 7
+
+11:07:25[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:07:25[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:07:25[DEBUG  ]r_w_cb 9,2
+
+11:07:25[DEBUG  ]EpollServer::OnWrite:9
+
+11:07:25[DEBUG  ]EpollServer::OnWrite send_len 83
+
+11:07:25[DEBUG  ]netlib_send 83
+
+11:07:29[DEBUG  ]r_w_cb 9,1
+
+11:07:29[DEBUG  ]EpollServer::OnRead:9
+
+11:07:29[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:07:29[DEBUG  ]DBWorker::sql UPDATE player SET lv=1,data='{"pos": 0, "channel": 7}',name='default',sex=1 WHERE id=1
+11:07:29[DEBUG  ]DBWorker::DealUpdateSql fail
+
+11:08:11[DEBUG  ]r_w_cb 9,1
+
+11:08:11[DEBUG  ]EpollServer::OnRead:9
+
+11:08:11[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:08:11[DEBUG  ]DBWorker::sql SELECT lv,data,name,sex FROM player WHERE id=1
+11:08:11[DEBUG  ]CDBConn::ExecuteQuery:SELECT lv,data,name,sex FROM player WHERE id=1
+
+11:08:11[DEBUG  ]MessageQueue::mq2c_Push:9,1,6,{"data":"{\"pos\": 0, \"channel\": 7}","lv":"1","name":"default","sex":"1"}
+
+11:08:11[DEBUG  ]eventfd_cb 7,1
+
+11:08:11[DEBUG  ]EpollServer::OnEventfd 7
+
+11:08:11[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:08:11[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:08:11[DEBUG  ]r_w_cb 9,2
+
+11:08:11[DEBUG  ]EpollServer::OnWrite:9
+
+11:08:11[DEBUG  ]EpollServer::OnWrite send_len 83
+
+11:08:11[DEBUG  ]netlib_send 83
+
+11:08:16[DEBUG  ]r_w_cb 9,1
+
+11:08:16[DEBUG  ]EpollServer::OnRead:9
+
+11:08:16[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:08:16[DEBUG  ]DBWorker::sql UPDATE player SET lv=1,data='{"pos": 0, "channel": 4}',name='default',sex=1 WHERE id=1
+11:08:16[DEBUG  ]DBWorker::DealUpdateSql success
+
+11:08:51[DEBUG  ]r_w_cb 9,1
+
+11:08:51[DEBUG  ]EpollServer::OnRead:9
+
+11:08:51[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:08:51[DEBUG  ]DBWorker::sql SELECT lv,data,name,sex FROM player WHERE id=1
+11:08:51[DEBUG  ]CDBConn::ExecuteQuery:SELECT lv,data,name,sex FROM player WHERE id=1
+
+11:08:51[DEBUG  ]MessageQueue::mq2c_Push:9,1,7,{"data":"{\"pos\": 0, \"channel\": 4}","lv":"1","name":"default","sex":"1"}
+
+11:08:51[DEBUG  ]eventfd_cb 7,1
+
+11:08:51[DEBUG  ]EpollServer::OnEventfd 7
+
+11:08:51[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:08:51[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:08:51[DEBUG  ]r_w_cb 9,2
+
+11:08:51[DEBUG  ]EpollServer::OnWrite:9
+
+11:08:51[DEBUG  ]EpollServer::OnWrite send_len 83
+
+11:08:51[DEBUG  ]netlib_send 83
+
+11:08:56[DEBUG  ]r_w_cb 9,1
+
+11:08:56[DEBUG  ]EpollServer::OnRead:9
+
+11:08:56[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:08:56[DEBUG  ]DBWorker::sql UPDATE player SET lv=1,data='{"pos": 0, "channel": 3}',name='default',sex=1 WHERE id=1
+11:08:56[DEBUG  ]DBWorker::DealUpdateSql success
+
+11:10:26[DEBUG  ]r_w_cb 9,1
+
+11:10:26[DEBUG  ]EpollServer::OnRead:9
+
+11:10:26[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:10:26[DEBUG  ]DBWorker::sql SELECT lv,data,name,sex FROM player WHERE id=1
+11:10:26[DEBUG  ]CDBConn::ExecuteQuery:SELECT lv,data,name,sex FROM player WHERE id=1
+
+11:10:26[DEBUG  ]MessageQueue::mq2c_Push:9,1,8,{"data":"{\"pos\": 0, \"channel\": 3}","lv":"1","name":"default","sex":"1"}
+
+11:10:26[DEBUG  ]eventfd_cb 7,1
+
+11:10:26[DEBUG  ]EpollServer::OnEventfd 7
+
+11:10:26[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:10:26[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:10:26[DEBUG  ]r_w_cb 9,2
+
+11:10:26[DEBUG  ]EpollServer::OnWrite:9
+
+11:10:26[DEBUG  ]EpollServer::OnWrite send_len 83
+
+11:10:26[DEBUG  ]netlib_send 83
+
+11:10:30[DEBUG  ]r_w_cb 9,1
+
+11:10:30[DEBUG  ]EpollServer::OnRead:9
+
+11:10:30[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:10:30[DEBUG  ]DBWorker::sql UPDATE player SET lv=1,data='{"pos": 0, "channel": 6}',name='default',sex=1 WHERE id=1
+11:10:30[DEBUG  ]DBWorker::DealUpdateSql success
+
+11:10:44[DEBUG  ]r_w_cb 9,1
+
+11:10:44[DEBUG  ]EpollServer::OnRead:9
+
+11:10:44[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:10:44[DEBUG  ]DBWorker::sql SELECT lv,data,name,sex FROM player WHERE id=1
+11:10:44[DEBUG  ]CDBConn::ExecuteQuery:SELECT lv,data,name,sex FROM player WHERE id=1
+
+11:10:44[DEBUG  ]MessageQueue::mq2c_Push:9,1,9,{"data":"{\"pos\": 0, \"channel\": 6}","lv":"1","name":"default","sex":"1"}
+
+11:10:44[DEBUG  ]eventfd_cb 7,1
+
+11:10:44[DEBUG  ]EpollServer::OnEventfd 7
+
+11:10:44[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:10:44[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:10:44[DEBUG  ]r_w_cb 9,2
+
+11:10:44[DEBUG  ]EpollServer::OnWrite:9
+
+11:10:44[DEBUG  ]EpollServer::OnWrite send_len 83
+
+11:10:44[DEBUG  ]netlib_send 83
+
+11:10:44[DEBUG  ]r_w_cb 9,1
+
+11:10:44[DEBUG  ]EpollServer::OnRead:9
+
+11:10:44[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:10:44[DEBUG  ]DBWorker::sql SELECT lv,data,name,sex FROM player WHERE id=2
+11:10:44[DEBUG  ]CDBConn::ExecuteQuery:SELECT lv,data,name,sex FROM player WHERE id=2
+
+11:10:44[DEBUG  ]MessageQueue::mq2c_Push:9,1,10,{"data":"{\"pos\": 1, \"channel\": 1}","lv":"2","name":"hahahaaaa","sex":"1"}
+
+11:10:44[DEBUG  ]eventfd_cb 7,1
+
+11:10:44[DEBUG  ]EpollServer::OnEventfd 7
+
+11:10:44[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:10:44[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:10:44[DEBUG  ]r_w_cb 9,2
+
+11:10:44[DEBUG  ]EpollServer::OnWrite:9
+
+11:10:44[DEBUG  ]EpollServer::OnWrite send_len 85
+
+11:10:44[DEBUG  ]netlib_send 85
+
+11:10:49[DEBUG  ]r_w_cb 9,1
+
+11:10:49[DEBUG  ]EpollServer::OnRead:9
+
+11:10:49[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:10:49[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:10:49[DEBUG  ]DBWorker::sql UPDATE player SET lv=1,data='{"pos": 0, "channel": 8}',name='default',sex=1 WHERE id=1
+11:10:49[DEBUG  ]DBWorker::DealUpdateSql success
+
+11:10:49[DEBUG  ]DBWorker::sql UPDATE player SET lv=2,data='{"pos": 1, "channel": 2}',name='hahahaaaa',sex=1 WHERE id=2
+11:10:49[DEBUG  ]DBWorker::DealUpdateSql success
+
+11:11:32[DEBUG  ]r_w_cb 9,1
+
+11:11:32[DEBUG  ]EpollServer::OnRead:9
+
+11:11:32[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:11:32[DEBUG  ]DBWorker::sql SELECT lv,data,name,sex FROM player WHERE id=1
+11:11:32[DEBUG  ]CDBConn::ExecuteQuery:SELECT lv,data,name,sex FROM player WHERE id=1
+
+11:11:32[DEBUG  ]MessageQueue::mq2c_Push:9,1,11,{"data":"{\"pos\": 0, \"channel\": 8}","lv":"1","name":"default","sex":"1"}
+
+11:11:32[DEBUG  ]eventfd_cb 7,1
+
+11:11:32[DEBUG  ]EpollServer::OnEventfd 7
+
+11:11:32[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:32[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:32[DEBUG  ]r_w_cb 9,2
+
+11:11:32[DEBUG  ]EpollServer::OnWrite:9
+
+11:11:32[DEBUG  ]EpollServer::OnWrite send_len 83
+
+11:11:32[DEBUG  ]netlib_send 83
+
+11:11:32[DEBUG  ]r_w_cb 9,1
+
+11:11:32[DEBUG  ]EpollServer::OnRead:9
+
+11:11:32[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:11:32[DEBUG  ]DBWorker::sql SELECT lv,data,name,sex FROM player WHERE id=2
+11:11:32[DEBUG  ]CDBConn::ExecuteQuery:SELECT lv,data,name,sex FROM player WHERE id=2
+
+11:11:32[DEBUG  ]MessageQueue::mq2c_Push:9,1,12,{"data":"{\"pos\": 1, \"channel\": 2}","lv":"2","name":"hahahaaaa","sex":"1"}
+
+11:11:32[DEBUG  ]eventfd_cb 7,1
+
+11:11:32[DEBUG  ]EpollServer::OnEventfd 7
+
+11:11:32[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:32[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:32[DEBUG  ]r_w_cb 9,2
+
+11:11:32[DEBUG  ]EpollServer::OnWrite:9
+
+11:11:32[DEBUG  ]EpollServer::OnWrite send_len 85
+
+11:11:32[DEBUG  ]netlib_send 85
+
+11:11:37[DEBUG  ]r_w_cb 9,1
+
+11:11:37[DEBUG  ]EpollServer::OnRead:9
+
+11:11:37[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:11:37[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:11:37[DEBUG  ]DBWorker::sql UPDATE player SET lv=1,data='{"pos": 0, "channel": 1}',name='default',sex=1 WHERE id=1
+11:11:37[DEBUG  ]DBWorker::DealUpdateSql success
+
+11:11:37[DEBUG  ]DBWorker::sql UPDATE player SET lv=2,data='{"pos": 1, "channel": 4}',name='hahahaaaa',sex=1 WHERE id=2
+11:11:37[DEBUG  ]DBWorker::DealUpdateSql success
+
+11:11:53[DEBUG  ]r_w_cb 9,1
+
+11:11:53[DEBUG  ]EpollServer::OnRead:9
+
+11:11:53[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:11:53[DEBUG  ]DBWorker::sql SELECT lv,data,name,sex FROM player WHERE id=1
+11:11:53[DEBUG  ]CDBConn::ExecuteQuery:SELECT lv,data,name,sex FROM player WHERE id=1
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Push:9,1,13,{"data":"{\"pos\": 0, \"channel\": 1}","lv":"1","name":"default","sex":"1"}
+
+11:11:53[DEBUG  ]eventfd_cb 7,1
+
+11:11:53[DEBUG  ]EpollServer::OnEventfd 7
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]r_w_cb 9,2
+
+11:11:53[DEBUG  ]EpollServer::OnWrite:9
+
+11:11:53[DEBUG  ]EpollServer::OnWrite send_len 83
+
+11:11:53[DEBUG  ]netlib_send 83
+
+11:11:53[DEBUG  ]r_w_cb 9,1
+
+11:11:53[DEBUG  ]EpollServer::OnRead:9
+
+11:11:53[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:11:53[DEBUG  ]DBWorker::sql SELECT lv,data,name,sex FROM player WHERE id=2
+11:11:53[DEBUG  ]CDBConn::ExecuteQuery:SELECT lv,data,name,sex FROM player WHERE id=2
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Push:9,1,14,{"data":"{\"pos\": 1, \"channel\": 4}","lv":"2","name":"hahahaaaa","sex":"1"}
+
+11:11:53[DEBUG  ]eventfd_cb 7,1
+
+11:11:53[DEBUG  ]EpollServer::OnEventfd 7
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]r_w_cb 9,2
+
+11:11:53[DEBUG  ]EpollServer::OnWrite:9
+
+11:11:53[DEBUG  ]EpollServer::OnWrite send_len 85
+
+11:11:53[DEBUG  ]netlib_send 85
+
+11:11:53[DEBUG  ]r_w_cb 9,1
+
+11:11:53[DEBUG  ]EpollServer::OnRead:9
+
+11:11:53[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:11:53[DEBUG  ]DBWorker::sql SELECT lv,data,name,sex FROM player WHERE id=3
+11:11:53[DEBUG  ]CDBConn::ExecuteQuery:SELECT lv,data,name,sex FROM player WHERE id=3
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Push:9,1,15,{"data":"{\"pos\": 0, \"channel\": 6}","lv":"1","name":"default","sex":"1"}
+
+11:11:53[DEBUG  ]eventfd_cb 7,1
+
+11:11:53[DEBUG  ]EpollServer::OnEventfd 7
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]r_w_cb 9,2
+
+11:11:53[DEBUG  ]EpollServer::OnWrite:9
+
+11:11:53[DEBUG  ]EpollServer::OnWrite send_len 83
+
+11:11:53[DEBUG  ]netlib_send 83
+
+11:11:53[DEBUG  ]r_w_cb 9,1
+
+11:11:53[DEBUG  ]EpollServer::OnRead:9
+
+11:11:53[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:11:53[DEBUG  ]DBWorker::sql SELECT lv,data,name,sex FROM player WHERE id=4
+11:11:53[DEBUG  ]CDBConn::ExecuteQuery:SELECT lv,data,name,sex FROM player WHERE id=4
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Push:9,1,16,{"data":"{\"pos\": 0, \"channel\": 4}","lv":"1","name":"default","sex":"1"}
+
+11:11:53[DEBUG  ]eventfd_cb 7,1
+
+11:11:53[DEBUG  ]EpollServer::OnEventfd 7
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]r_w_cb 9,2
+
+11:11:53[DEBUG  ]EpollServer::OnWrite:9
+
+11:11:53[DEBUG  ]EpollServer::OnWrite send_len 83
+
+11:11:53[DEBUG  ]netlib_send 83
+
+11:11:53[DEBUG  ]r_w_cb 9,1
+
+11:11:53[DEBUG  ]EpollServer::OnRead:9
+
+11:11:53[DEBUG  ]MessageQueue::MQ2S_Push
+
+11:11:53[DEBUG  ]DBWorker::sql SELECT lv,data,name,sex FROM player WHERE id=5
+11:11:53[DEBUG  ]CDBConn::ExecuteQuery:SELECT lv,data,name,sex FROM player WHERE id=5
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Push:9,1,17,{"data":"{\"pos\": 0, \"channel\": 8}","lv":"1","name":"default","sex":"1"}
+
+11:11:53[DEBUG  ]eventfd_cb 7,1
+
+11:11:53[DEBUG  ]EpollServer::OnEventfd 7
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]MessageQueue::mq2c_Pop
+
+11:11:53[DEBUG  ]r_w_cb 9,2
+
+11:11:53[DEBUG  ]EpollServer::OnWrite:9
+
+11:11:53[DEBUG  ]EpollServer::OnWrite send_len 83
+
+11:11:53[DEBUG  ]netlib_send 83
+

@@ -1,0 +1,36 @@
+{
+	"log_level": "15",
+	"log_path": "../log/",
+	"gate_list": "gate1,gate2",
+	"game_list": "game1",
+	"db_list": "db1",
+	"gate1": {
+		"ip": "0.0.0.0",
+		"port": 4000
+	},
+	"gate2": {
+		"ip": "0.0.0.0",
+		"port": 4001
+	},
+	"game1": {
+		"ip": "127.0.0.1",
+		"port": 5000,
+		"worker_num": 1
+	},
+	"gamemanager": {
+		"ip": "127.0.0.1",
+		"port": 6000
+	},
+	"db1": {
+		"ip": "127.0.0.1",
+		"port": 7000,
+		"worker_num": 1
+	},
+	"mysql": {
+		"host": "127.0.0.1",
+		"user": "kg_star_latest",
+		"passwd": "1234",
+		"db": "kg_star_latest",
+		"port": 3306
+	}
+}

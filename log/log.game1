@@ -1,0 +1,102 @@
+Traceback (most recent call last):
+  File "../pyscript/pymain.py", line 21, in CallMethod
+    dict = json.loads(data)
+  File "/usr/lib64/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib64/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "../pyscript/pymain.py", line 55, in OnTick
+    for entity, entity in EntityManager.entitys().iteritems():
+  File "../pyscript/pymain.py", line 31, in CallMethod
+    dispatch_protocol(uniqid, command_id, sub_id, data)
+  File "../pyscript/server/ProtocolDispatcher.py", line 25, in dispatch_protocol
+    attr(uniqid, data)
+  File "../pyscript/logic/chat/zprotocol.py", line 10, in proto_3_1
+    chat.talk_to_others(uniqid, data)
+  File "../pyscript/logic/chat/Chat.py", line 16, in talk_to_others
+    msg = data["msg"]
+TypeError: string indices must be integers, not str
+Traceback (most recent call last):
+  File "../pyscript/pymain.py", line 21, in CallMethod
+    dict = json.loads(data)
+  File "/usr/lib64/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib64/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+SystemError: new style getargs format but argument is not a tuple
+Traceback (most recent call last):
+  File "../pyscript/pymain.py", line 21, in CallMethod
+    dict = json.loads(data)
+  File "/usr/lib64/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib64/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "../pyscript/pymain.py", line 55, in OnTick
+    for entity, entity in EntityManager.entitys().iteritems():
+SystemError: new style getargs format but argument is not a tuple
+Traceback (most recent call last):
+  File "../pyscript/pymain.py", line 21, in CallMethod
+    dict = json.loads(data)
+  File "/usr/lib64/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib64/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "../pyscript/pymain.py", line 55, in OnTick
+    for entity, entity in EntityManager.entitys().iteritems():
+SystemError: new style getargs format but argument is not a tuple
+Traceback (most recent call last):
+  File "../pyscript/pymain.py", line 21, in CallMethod
+    dict = json.loads(data)
+  File "/usr/lib64/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib64/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+SystemError: new style getargs format but argument is not a tuple
+Traceback (most recent call last):
+  File "../pyscript/pymain.py", line 21, in CallMethod
+    dict = json.loads(data)
+  File "/usr/lib64/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib64/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "../pyscript/pymain.py", line 55, in OnTick
+    for entity, entity in EntityManager.entitys().iteritems():
+SystemError: new style getargs format but argument is not a tuple
+Traceback (most recent call last):
+  File "../pyscript/pymain.py", line 21, in CallMethod
+    dict = json.loads(data)
+  File "/usr/lib64/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib64/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "../pyscript/pymain.py", line 55, in OnTick
+    for entity, entity in EntityManager.entitys().iteritems():
+SystemError: new style getargs format but argument is not a tuple
+Traceback (most recent call last):
+  File "../pyscript/pymain.py", line 21, in CallMethod
+    dict = json.loads(data)
+  File "/usr/lib64/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib64/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+SystemError: new style getargs format but argument is not a tuple
+Traceback (most recent call last):
+  File "../pyscript/pymain.py", line 21, in CallMethod
+    dict = json.loads(data)
+  File "/usr/lib64/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib64/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "../pyscript/pymain.py", line 55, in OnTick
+    for entity, entity in EntityManager.entitys().iteritems():
+SystemError: new style getargs format but argument is not a tuple
+Traceback (most recent call last):
+  File "../pyscript/pymain.py", line 21, in CallMethod
+    dict = json.loads(data)
+  File "/usr/lib64/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib64/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "../pyscript/pymain.py", line 55, in OnTick
+    for entity, entity in EntityManager.entitys().iteritems():
+SystemError: new style getargs format but argument is not a tuple

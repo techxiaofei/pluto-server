@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+__author = "majianfei"
+
+# 游戏内通用宏定义
+
+CHANNEL_1 = 1
+CHANNEL_2 = 2
+CHANNEL_3 = 3
+CHANNEL_4 = 4
+CHANNEL_5 = 5
+CHANNEL_6 = 6
+CHANNEL_7 = 7
+CHANNEL_8 = 8
+
+CHANNEL_LIST = [CHANNEL_1,CHANNEL_2,CHANNEL_3,CHANNEL_4,CHANNEL_5,CHANNEL_6,CHANNEL_7,CHANNEL_8]
+
+

@@ -1,0 +1,6 @@
+libev-4.15
+#protobuf-2.6.1
+mysql-5.5
+python-2.7
+g++-4.8.5
+xlrd-1.0.0
